@@ -7,9 +7,14 @@ We always having fun ！！！！
 
 ### Slogan
 
-我的喜欢写在风里， 从此整个世界都是你
+小雨：我的喜欢写在风里， 从此整个世界都是你
 
-![love](/WechatIMG20459.jpeg)
+![love](/WechatIMG20478.jpeg)
+
+面包：你像一个人，我的人~
+
+![love](/111.jpeg)
+
 
 # Header 1
 ## Header 2
