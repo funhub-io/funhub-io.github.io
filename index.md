@@ -1,7 +1,7 @@
 ## Welcome to Funhub
-we always having fun ！！！！
+We always having fun ！！！！
 
-### Memembers
+### Members
 
 国宝，毒牙，士锋，灿神， 诗慧， 面包，大攀， 老潘，周一， 小雨
 
