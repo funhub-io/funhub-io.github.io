@@ -1,8 +1,9 @@
-## Welcome to GitHub Pages
+## Welcome to Funhub
+we always having fun ！！！！
 
-You can use the [editor on GitHub](https://github.com/funhub-io/funhub-io.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
+### Memembers
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+国宝，毒牙，士锋，灿神， 诗慧， 面包，大攀， 老潘，周一， 小雨
 
 ### Markdown
 
