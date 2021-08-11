@@ -9,7 +9,7 @@ We always having fun ！！！！
 
 我的喜欢写在风里， 从此整个世界都是你
 
-[love](/WechatIMG20459.jpeg)
+![love](/WechatIMG20459.jpeg)
 
 # Header 1
 ## Header 2
