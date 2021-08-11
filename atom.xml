@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>FunHub</title>
+  
+  <subtitle>We Always Having Fun ！！！</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://mfrank2016.github.io/"/>
+  <updated>2021-05-30T13:45:35.000Z</updated>
+  <id>https://mfrank2016.github.io/</id>
+  
+  <author>
+    <name>FunHub</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【聊聊认知】你的答案是什么</title>
+    <link href="https://mfrank2016.github.io/2021/05/30/thoughts/what-is-your-answer/"/>
+    <id>https://mfrank2016.github.io/2021/05/30/thoughts/what-is-your-answer/</id>
+    <published>2021-05-30T13:45:35.000Z</published>
+    <updated>2021-05-30T13:45:35.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;每一个问题都有一个答案。&lt;/p&gt;
+&lt;p&gt;天空为什么是蓝色？因为太阳光发生了散射。&lt;/p&gt;
+&lt;p&gt;鸟为什么会飞？因为鸟有翅膀。&lt;/p&gt;
+&lt;p&gt;苹果为什么会掉下来？因为万有引力。&lt;/p&gt;
+&lt;p&gt;每个问题我们都可以为它找到一个答案，我们也总是习惯于为每个问题找到一个合理的解释。&lt;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="生活" scheme="https://mfrank2016.github.io/categories/life/"/>
+    
+      <category term="答案" scheme="https://mfrank2016.github.io/categories/life/%E7%AD%94%E6%A1%88/"/>
+    
+    
+      <category term="Thoughts" scheme="https://mfrank2016.github.io/tags/Thoughts/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>conclusion/2020-conclusion-working</title>
+    <link href="https://mfrank2016.github.io/2021/05/30/conclusion/2020-conclusion-working/"/>
+    <id>https://mfrank2016.github.io/2021/05/30/conclusion/2020-conclusion-working/</id>
+    <published>2021-05-30T05:48:43.605Z</published>
+    <updated>2021-05-30T05:48:43.605Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+       
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>我的2020【健身篇】</title>
+    <link href="https://mfrank2016.github.io/2021/02/17/conclusion/2020-conclusion-slim/"/>
+    <id>https://mfrank2016.github.io/2021/02/17/conclusion/2020-conclusion-slim/</id>
+    <published>2021-02-17T22:54:35.000Z</published>
+    <updated>2021-02-17T22:54:35.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;难忘的一年&quot;&gt;&lt;a href=&quot;#难忘的一年&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="life" scheme="https://mfrank2016.github.io/categories/life/"/>
+    
+    
+      <category term="年终总结" scheme="https://mfrank2016.github.io/tags/yearly-conclusion/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Go语言绘图】图片添加文字（二）</title>
+    <link href="https://mfrank2016.github.io/2020/12/22/picture/go-draw-word-in-pic2/"/>
+    <id>https://mfrank2016.github.io/2020/12/22/picture/go-draw-word-in-pic2/</id>
+    <published>2020-12-22T22:40:35.000Z</published>
+    <updated>2020-12-22T22:40:35.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;这一篇将继续介绍gg库中绘制文字相关的方法，主要包括：&lt;code&gt;DrawStringAnchored()&lt;/code&gt;、&lt;code&gt;DrawStringWrapped()&lt;/code&gt;、&lt;code&gt;MeasureMultilineString()&lt;/code&gt;、&lt;code
+        
+      
+    
+    </summary>
+    
+    
+      <category term="编程" scheme="https://mfrank2016.github.io/categories/programming/"/>
+    
+    
+      <category term="go" scheme="https://mfrank2016.github.io/tags/go/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Go语言绘图】图片添加文字（一）</title>
+    <link href="https://mfrank2016.github.io/2020/12/20/picture/go-draw-word-in-pic/"/>
+    <id>https://mfrank2016.github.io/2020/12/20/picture/go-draw-word-in-pic/</id>
+    <published>2020-12-20T22:45:35.000Z</published>
+    <updated>2020-12-20T22:45:35.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;前一篇讲解了利用gg包来进行图片旋转的操作，这一篇我们来看看怎么在图片上添加文字。&lt;/p&gt;
+&lt;h2 id=&quot;绘制纯色背景&quot;&gt;&lt;a href=&quot;#绘制纯色背景&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="编程" scheme="https://mfrank2016.github.io/categories/programming/"/>
+    
+    
+      <category term="go" scheme="https://mfrank2016.github.io/tags/go/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Go语言绘图】图片的旋转</title>
+    <link href="https://mfrank2016.github.io/2020/12/16/picture/go-pic-rotate-use-gg-package/"/>
+    <id>https://mfrank2016.github.io/2020/12/16/picture/go-pic-rotate-use-gg-package/</id>
+    <published>2020-12-16T22:50:00.000Z</published>
+    <updated>2020-12-16T22:50:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;在上一篇中，我们了解了gg库的基本使用，包括调整大小、调整圆形参数、设置颜色、保存图片、加载图片和裁剪。这一篇我们来学习一下图片的旋转。&lt;/p&gt;
+&lt;h2 id=&quot;加载图片&quot;&gt;&lt;a href=&quot;#加载图片&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="编程" scheme="https://mfrank2016.github.io/categories/programming/"/>
+    
+    
+      <category term="go" scheme="https://mfrank2016.github.io/tags/go/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Go语言绘图】gg 库的基本使用</title>
+    <link href="https://mfrank2016.github.io/2020/11/29/picture/go-basic-usage-of-gg-package/"/>
+    <id>https://mfrank2016.github.io/2020/11/29/picture/go-basic-usage-of-gg-package/</id>
+    <published>2020-11-29T22:45:35.000Z</published>
+    <updated>2020-11-29T22:45:35.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;最近接了个比较大的需求，需要做很多图片处理的事情，比如图片的旋转裁截拼接，各种渐变处理，文字排列，一开始光是想想就头疼。但没有办法，既然已经需求已经到手上了，那就得把它做好才行，于是便开始被迫营业，无证上岗了。&lt;/p&gt;
+&lt;p&gt;经过一番查找，找到了一个Go语言图片处理的库，经
+        
+      
+    
+    </summary>
+    
+    
+      <category term="编程" scheme="https://mfrank2016.github.io/categories/programming/"/>
+    
+    
+      <category term="go" scheme="https://mfrank2016.github.io/tags/go/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【R语言入门】R语言中的变量与基本数据类型</title>
+    <link href="https://mfrank2016.github.io/2020/11/28/data-analysis/r-study-basic-type/"/>
+    <id>https://mfrank2016.github.io/2020/11/28/data-analysis/r-study-basic-type/</id>
+    <published>2020-11-28T08:54:35.000Z</published>
+    <updated>2020-11-28T08:54:35.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;说明&quot;&gt;&lt;a href=&quot;#说明&quot; class=&quot;headerlink&quot; title=&quot;说明&quot;&gt;&lt;/a&gt;说明&lt;/h2&gt;&lt;p&gt;在前一篇中，我们介绍了 &lt;code&gt;R&lt;/code&gt; 语言和 &lt;code&gt;R Studio&lt;/code&gt;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="编程" scheme="https://mfrank2016.github.io/categories/programming/"/>
+    
+      <category term="数据分析" scheme="https://mfrank2016.github.io/categories/programming/data-analysis/"/>
+    
+    
+      <category term="R" scheme="https://mfrank2016.github.io/tags/R/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【R语言入门】R语言环境搭建</title>
+    <link href="https://mfrank2016.github.io/2020/11/28/data-analysis/r-study-install/"/>
+    <id>https://mfrank2016.github.io/2020/11/28/data-analysis/r-study-install/</id>
+    <published>2020-11-28T08:47:35.000Z</published>
+    <updated>2020-11-28T08:47:35.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;说明&quot;&gt;&lt;a href=&quot;#说明&quot; class=&quot;headerlink&quot; title=&quot;说明&quot;&gt;&lt;/a&gt;说明&lt;/h2&gt;&lt;p&gt;&lt;code&gt;R&lt;/code&gt; 语言是一个功能十分强大的工具，几乎绝大多数的数据分析工作都可以在 &lt;code&gt;R&lt;/code&gt;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="编程" scheme="https://mfrank2016.github.io/categories/programming/"/>
+    
+      <category term="数据分析" scheme="https://mfrank2016.github.io/categories/programming/data-analysis/"/>
+    
+    
+      <category term="R" scheme="https://mfrank2016.github.io/tags/R/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【周末随想】我思故我在</title>
+    <link href="https://mfrank2016.github.io/2020/11/01/thoughts/cogito-ergo-sum/"/>
+    <id>https://mfrank2016.github.io/2020/11/01/thoughts/cogito-ergo-sum/</id>
+    <published>2020-11-01T23:45:35.000Z</published>
+    <updated>2020-11-01T23:45:35.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;又是一个周末的晚上，刚在客厅看完令人爆笑的脱口秀，回到自己房间，关了灯，做几次深呼吸，把心情平静了下来。虽然刚才的脱口秀确实让人忍俊不禁，但此刻的独处更让我欢喜。在这漆黑的房间里，闭上眼，聆听周围的一切，感受心跳的旋律和呼吸的节奏，能获得一种独特的平静。&lt;/p&gt;
+&lt;p&gt;闭目
+        
+      
+    
+    </summary>
+    
+    
+      <category term="编程" scheme="https://mfrank2016.github.io/categories/programming/"/>
+    
+    
+      <category term="Thoughts" scheme="https://mfrank2016.github.io/tags/Thoughts/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【聊聊认知】你以为你以为的就是你以为的吗</title>
+    <link href="https://mfrank2016.github.io/2020/05/31/thoughts/why-are-we-biased/"/>
+    <id>https://mfrank2016.github.io/2020/05/31/thoughts/why-are-we-biased/</id>
+    <published>2020-05-31T21:00:50.000Z</published>
+    <updated>2020-05-31T21:00:50.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="编程" scheme="https://mfrank2016.github.io/categories/programming/"/>
+    
+    
+      <category term="Thoughts" scheme="https://mfrank2016.github.io/tags/Thoughts/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Hexo】使用Hexo+github pages+travis ci搭建好看的个人博客（三）</title>
+    <link href="https://mfrank2016.github.io/2020/05/04/hexo/hexo-theme/"/>
+    <id>https://mfrank2016.github.io/2020/05/04/hexo/hexo-theme/</id>
+    <published>2020-05-04T10:40:14.000Z</published>
+    <updated>2020-05-04T10:40:14.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;说明&quot;&gt;&lt;a href=&quot;#说明&quot; class=&quot;headerlink&quot; title=&quot;说明&quot;&gt;&lt;/a&gt;说明&lt;/h2&gt;&lt;p&gt;前两篇文章介绍了 &lt;code&gt;Hexo&lt;/code&gt; + &lt;code&gt;github pages&lt;/code&gt; + &lt;code&gt;travis
+        
+      
+    
+    </summary>
+    
+    
+      <category term="编程" scheme="https://mfrank2016.github.io/categories/programming/"/>
+    
+    
+      <category term="环境搭建" scheme="https://mfrank2016.github.io/tags/environment-building/"/>
+    
+      <category term="Hexo" scheme="https://mfrank2016.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【RabbitMQ】一文带你搞定RabbitMQ延迟队列</title>
+    <link href="https://mfrank2016.github.io/2020/05/04/rabbitmq/rabbitmq-how-to-use-delay-queue/"/>
+    <id>https://mfrank2016.github.io/2020/05/04/rabbitmq/rabbitmq-how-to-use-delay-queue/</id>
+    <published>2020-05-04T01:00:50.000Z</published>
+    <updated>2020-05-04T01:00:50.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;本文口味：鱼香肉丝   预计阅读：10分钟&lt;/p&gt;
+&lt;h2 id=&quot;一、说明&quot;&gt;&lt;a href=&quot;#一、说明&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="编程" scheme="https://mfrank2016.github.io/categories/programming/"/>
+    
+    
+      <category term="RabbitMQ" scheme="https://mfrank2016.github.io/tags/RabbitMQ/"/>
+    
+      <category term="DelayQueue" scheme="https://mfrank2016.github.io/tags/DelayQueue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【RabbitMQ】一文带你搞定RabbitMQ死信队列</title>
+    <link href="https://mfrank2016.github.io/2020/05/04/rabbitmq/rabbitmq-how-to-use-dead-letter-queue/"/>
+    <id>https://mfrank2016.github.io/2020/05/04/rabbitmq/rabbitmq-how-to-use-dead-letter-queue/</id>
+    <published>2020-05-04T01:00:40.000Z</published>
+    <updated>2020-05-04T01:00:40.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;本文口味：爆炒鱿鱼   预计阅读：15分钟&lt;/p&gt;
+&lt;h2 id=&quot;一、说明&quot;&gt;&lt;a href=&quot;#一、说明&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="编程" scheme="https://mfrank2016.github.io/categories/programming/"/>
+    
+    
+      <category term="RabbitMQ" scheme="https://mfrank2016.github.io/tags/RabbitMQ/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【RabbitMQ】如何进行消息可靠投递【下篇】</title>
+    <link href="https://mfrank2016.github.io/2020/05/04/rabbitmq/rabbitmq-how-to-ensure-reliable-delivery-of-message2/"/>
+    <id>https://mfrank2016.github.io/2020/05/04/rabbitmq/rabbitmq-how-to-ensure-reliable-delivery-of-message2/</id>
+    <published>2020-05-04T01:00:30.000Z</published>
+    <updated>2020-05-04T01:00:30.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;说明&quot;&gt;&lt;a href=&quot;#说明&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="编程" scheme="https://mfrank2016.github.io/categories/programming/"/>
+    
+    
+      <category term="RabbitMQ" scheme="https://mfrank2016.github.io/tags/RabbitMQ/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【RabbitMQ】如何进行消息可靠投递【上篇】</title>
+    <link href="https://mfrank2016.github.io/2020/05/04/rabbitmq/rabbitmq-how-to-ensure-reliable-delivery-of-message/"/>
+    <id>https://mfrank2016.github.io/2020/05/04/rabbitmq/rabbitmq-how-to-ensure-reliable-delivery-of-message/</id>
+    <published>2020-05-04T01:00:20.000Z</published>
+    <updated>2020-05-04T01:00:20.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;说明&quot;&gt;&lt;a href=&quot;#说明&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="编程" scheme="https://mfrank2016.github.io/categories/programming/"/>
+    
+    
+      <category term="RabbitMQ" scheme="https://mfrank2016.github.io/tags/RabbitMQ/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【最佳实践】如何优雅的进行重试</title>
+    <link href="https://mfrank2016.github.io/2020/05/04/best-practice/how-to-retry-elegantly/"/>
+    <id>https://mfrank2016.github.io/2020/05/04/best-practice/how-to-retry-elegantly/</id>
+    <published>2020-05-04T01:00:10.000Z</published>
+    <updated>2020-05-04T01:00:10.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;本文口味：冰镇杨梅           预计阅读：20分钟&lt;/p&gt;
+&lt;h2 id=&quot;说明&quot;&gt;&lt;a href=&quot;#说明&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="编程" scheme="https://mfrank2016.github.io/categories/programming/"/>
+    
+    
+      <category term="最佳实践" scheme="https://mfrank2016.github.io/tags/best-practice/"/>
+    
+      <category term="优雅重试" scheme="https://mfrank2016.github.io/tags/retry-gracefully/"/>
+    
+      <category term="Spring" scheme="https://mfrank2016.github.io/tags/Spring/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Java基础篇】四、Java 类与对象</title>
+    <link href="https://mfrank2016.github.io/2020/05/04/java/basic/java-class/"/>
+    <id>https://mfrank2016.github.io/2020/05/04/java/basic/java-class/</id>
+    <published>2020-05-04T00:25:05.000Z</published>
+    <updated>2020-05-04T00:25:05.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Java-类与对象&quot;&gt;&lt;a href=&quot;#Java-类与对象&quot; class=&quot;headerlink&quot; title=&quot;Java 类与对象&quot;&gt;&lt;/a&gt;Java 类与对象&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;“Sometimes we stare
+        
+      
+    
+    </summary>
+    
+    
+      <category term="编程" scheme="https://mfrank2016.github.io/categories/programming/"/>
+    
+    
+      <category term="Java" scheme="https://mfrank2016.github.io/tags/Java/"/>
+    
+      <category term="Java基础" scheme="https://mfrank2016.github.io/tags/java-basic/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Java基础篇】三、Java 变量</title>
+    <link href="https://mfrank2016.github.io/2020/05/04/java/basic/java-variable/"/>
+    <id>https://mfrank2016.github.io/2020/05/04/java/basic/java-variable/</id>
+    <published>2020-05-04T00:25:04.000Z</published>
+    <updated>2020-05-04T00:25:04.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;“The superior man makes the difficulty to be overcome his first interest; success comes only
+        
+      
+    
+    </summary>
+    
+    
+      <category term="编程" scheme="https://mfrank2016.github.io/categories/programming/"/>
+    
+    
+      <category term="Java" scheme="https://mfrank2016.github.io/tags/Java/"/>
+    
+      <category term="Java基础" scheme="https://mfrank2016.github.io/tags/java-basic/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Java基础篇】二、Java 程序基本结构</title>
+    <link href="https://mfrank2016.github.io/2020/05/04/java/basic/java-simple-structure/"/>
+    <id>https://mfrank2016.github.io/2020/05/04/java/basic/java-simple-structure/</id>
+    <published>2020-05-04T00:25:03.000Z</published>
+    <updated>2020-05-04T00:25:03.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;“No matter how small and unimportant what we are doing may seem, if we do it well, it may soon become the step that will
+        
+      
+    
+    </summary>
+    
+    
+      <category term="编程" scheme="https://mfrank2016.github.io/categories/programming/"/>
+    
+    
+      <category term="Java" scheme="https://mfrank2016.github.io/tags/Java/"/>
+    
+      <category term="Java基础" scheme="https://mfrank2016.github.io/tags/java-basic/"/>
+    
+  </entry>
+  
+</feed>

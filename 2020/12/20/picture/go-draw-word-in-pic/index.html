@@ -1,0 +1,1756 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="【Go语言绘图】图片添加文字（一）, 生活,编程,阅读,音乐,电影">
+    <meta name="description" content="铭记过去，拥抱未来，心中有梦，眼里有光">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>【Go语言绘图】图片添加文字（一） | FunHub</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="FunHub" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">FunHub</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">FunHub</div>
+        <div class="logo-desc">
+            
+            铭记过去，拥抱未来，心中有梦，眼里有光
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">【Go语言绘图】图片添加文字（一）</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/go/">
+                                <span class="chip bg-color">go</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/programming/" class="post-category">
+                                编程
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-12-20
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2020-12-20
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    3.1k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    12 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>前一篇讲解了利用gg包来进行图片旋转的操作，这一篇我们来看看怎么在图片上添加文字。</p>
+<h2 id="绘制纯色背景"><a href="#绘制纯色背景" class="headerlink" title="绘制纯色背景"></a>绘制纯色背景</h2><p>首先，我们先绘制一个纯白色的背景，作为添加文字的背景板。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token string">"github.com/fogleman/gg"</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> S <span class="token operator">=</span> <span class="token number">1024</span>
+    dc <span class="token operator">:=</span> gg<span class="token punctuation">.</span><span class="token function">NewContext</span><span class="token punctuation">(</span>S<span class="token punctuation">,</span> S<span class="token punctuation">)</span>
+    dc<span class="token punctuation">.</span><span class="token function">SetRGB</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+    dc<span class="token punctuation">.</span><span class="token function">Clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    dc<span class="token punctuation">.</span><span class="token function">SavePNG</span><span class="token punctuation">(</span><span class="token string">"out.png"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre>
+<p>输出图片如下：</p>
+<p><img src="1.png" alt=""></p>
+<p>这样我就得到了一张纯青色的背景图。回顾一下上一篇里绘制背景图的步骤：</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token function">TestRotateImage</span><span class="token punctuation">(</span>t <span class="token operator">*</span>testing<span class="token punctuation">.</span>T<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    width <span class="token operator">:=</span> <span class="token number">1000</span>
+    height <span class="token operator">:=</span> <span class="token number">1000</span>
+
+    dc <span class="token operator">:=</span> gg<span class="token punctuation">.</span><span class="token function">NewContext</span><span class="token punctuation">(</span>width<span class="token punctuation">,</span> height<span class="token punctuation">)</span>
+    dc<span class="token punctuation">.</span><span class="token function">DrawRectangle</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token function">float64</span><span class="token punctuation">(</span>width<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">float64</span><span class="token punctuation">(</span>width<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    dc<span class="token punctuation">.</span><span class="token function">SetRGB255</span><span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+    dc<span class="token punctuation">.</span><span class="token function">Fill</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    dc<span class="token punctuation">.</span><span class="token function">SavePNG</span><span class="token punctuation">(</span><span class="token string">"test.png"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre>
+<p>我们是通过先绘制跟画布同样大小的矩形，然后将它的颜色进行填充来实现纯色背景效果的，但实际上使用 <code>Clear()</code> 方法便能直接使用当前颜色对画布进行填充。</p>
+<p>查看一下 <code>Clear()</code> 方法便能发现，里面是通过调用 <code>draw.Draw()</code> 函数来实现的，这也是go语言自带的 <code>image</code> 包里很有用的一个函数，后面会有文章来做更详细的介绍。简单来说，<code>Clear()</code> 方法是通过调用<code>draw.Draw()</code> 函数，通过将纯色图片覆盖到原画布的方式来实现纯色背景的效果的。</p>
+<pre class=" language-go"><code class="language-go"><span class="token comment" spellcheck="true">// Clear fills the entire image with the current color.</span>
+<span class="token keyword">func</span> <span class="token punctuation">(</span>dc <span class="token operator">*</span>Context<span class="token punctuation">)</span> <span class="token function">Clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    src <span class="token operator">:=</span> image<span class="token punctuation">.</span><span class="token function">NewUniform</span><span class="token punctuation">(</span>dc<span class="token punctuation">.</span>color<span class="token punctuation">)</span>
+    draw<span class="token punctuation">.</span><span class="token function">Draw</span><span class="token punctuation">(</span>dc<span class="token punctuation">.</span>im<span class="token punctuation">,</span> dc<span class="token punctuation">.</span>im<span class="token punctuation">.</span><span class="token function">Bounds</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> src<span class="token punctuation">,</span> image<span class="token punctuation">.</span>ZP<span class="token punctuation">,</span> draw<span class="token punctuation">.</span>Src<span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre>
+<h2 id="添加文字"><a href="#添加文字" class="headerlink" title="添加文字"></a>添加文字</h2><p>背景板已经准备就绪，接下来，我们来添加一些文字。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token string">"github.com/fogleman/gg"</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> S <span class="token operator">=</span> <span class="token number">1024</span>
+    dc <span class="token operator">:=</span> gg<span class="token punctuation">.</span><span class="token function">NewContext</span><span class="token punctuation">(</span>S<span class="token punctuation">,</span> S<span class="token punctuation">)</span>
+    dc<span class="token punctuation">.</span><span class="token function">SetRGB</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+    dc<span class="token punctuation">.</span><span class="token function">Clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    dc<span class="token punctuation">.</span><span class="token function">SetRGB</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> err <span class="token operator">:=</span> dc<span class="token punctuation">.</span><span class="token function">LoadFontFace</span><span class="token punctuation">(</span><span class="token string">"gilmer-heavy.ttf"</span><span class="token punctuation">,</span> <span class="token number">120</span><span class="token punctuation">)</span><span class="token punctuation">;</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+        <span class="token function">panic</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    dc<span class="token punctuation">.</span><span class="token function">DrawString</span><span class="token punctuation">(</span><span class="token string">"Hello, world!"</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> S<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">)</span>
+    dc<span class="token punctuation">.</span><span class="token function">SavePNG</span><span class="token punctuation">(</span><span class="token string">"out.png"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre>
+<p>输出如下，一个硕大、黑色的“Hello, World!”就出现在了图片中央。</p>
+<p><img src="2.png" alt=""></p>
+<p>这里我们添加了三个步骤，首先是设置了字体颜色为黑色。</p>
+<pre class=" language-go"><code class="language-go">dc<span class="token punctuation">.</span><span class="token function">SetRGB</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span></code></pre>
+<p>然后加载了字体文件，这里需要注意的是，通过 <code>LoadFontFace()</code> 方法加载的字体文件只支持 <code>ttf</code> 后缀的文件，也就是 <code>true type font</code>，</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">if</span> err <span class="token operator">:=</span> dc<span class="token punctuation">.</span><span class="token function">LoadFontFace</span><span class="token punctuation">(</span><span class="token string">"gilmer-heavy.ttf"</span><span class="token punctuation">,</span> <span class="token number">120</span><span class="token punctuation">)</span><span class="token punctuation">;</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+    <span class="token function">panic</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre>
+<p>里面的实现也比较简单：</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>dc <span class="token operator">*</span>Context<span class="token punctuation">)</span> <span class="token function">LoadFontFace</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">,</span> points <span class="token builtin">float64</span><span class="token punctuation">)</span> <span class="token builtin">error</span> <span class="token punctuation">{</span>
+    face<span class="token punctuation">,</span> err <span class="token operator">:=</span> <span class="token function">LoadFontFace</span><span class="token punctuation">(</span>path<span class="token punctuation">,</span> points<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> err <span class="token operator">==</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+        dc<span class="token punctuation">.</span>fontFace <span class="token operator">=</span> face
+        dc<span class="token punctuation">.</span>fontHeight <span class="token operator">=</span> points <span class="token operator">*</span> <span class="token number">72</span> <span class="token operator">/</span> <span class="token number">96</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> err
+<span class="token punctuation">}</span></code></pre>
+<p>内部调用了 <code>LoadFontFace()</code> 函数，在这个函数内部进行了字体文件读取，并用 <code>freetype</code> 包里的<code>Parse()</code>函数进行字体的加载，最后在调用 <code>NewFace()</code> 函数来创建一个 <code>font.Face</code> 对象，在外面的<code>LoadFontFace()</code>方法里，将这个对象保存在 <code>fontFace</code> 字段中，并且根据传入的<code>point</code>大小设置了一下字体高度。</p>
+<p>至于为什么是乘以<code>72</code>然后除以<code>96</code>，这个查了一下资料，简单的说，字体的大小单位磅(<code>points</code>) 是<code>1/72</code>逻辑英寸，屏幕的分辨率是<code>96DPI</code>（96点每逻辑英寸），那么屏幕每个点就是<code>72/96</code>=<code>0.75</code>磅。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token function">LoadFontFace</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">,</span> points <span class="token builtin">float64</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>font<span class="token punctuation">.</span>Face<span class="token punctuation">,</span> <span class="token builtin">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    fontBytes<span class="token punctuation">,</span> err <span class="token operator">:=</span> ioutil<span class="token punctuation">.</span><span class="token function">ReadFile</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token boolean">nil</span><span class="token punctuation">,</span> err
+    <span class="token punctuation">}</span>
+    f<span class="token punctuation">,</span> err <span class="token operator">:=</span> truetype<span class="token punctuation">.</span><span class="token function">Parse</span><span class="token punctuation">(</span>fontBytes<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token boolean">nil</span><span class="token punctuation">,</span> err
+    <span class="token punctuation">}</span>
+    face <span class="token operator">:=</span> truetype<span class="token punctuation">.</span><span class="token function">NewFace</span><span class="token punctuation">(</span>f<span class="token punctuation">,</span> <span class="token operator">&amp;</span>truetype<span class="token punctuation">.</span>Options<span class="token punctuation">{</span>
+        Size<span class="token punctuation">:</span> points<span class="token punctuation">,</span>
+        <span class="token comment" spellcheck="true">// Hinting: font.HintingFull,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> face<span class="token punctuation">,</span> <span class="token boolean">nil</span>
+<span class="token punctuation">}</span></code></pre>
+<h3 id="调整字体大小"><a href="#调整字体大小" class="headerlink" title="调整字体大小"></a>调整字体大小</h3><p>如果想调整字体大小，也很简单，只需要调整<code>LoadFontFace()</code> 方法传入的值即可，让我们来调大一点字体看看效果。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">if</span> err <span class="token operator">:=</span> dc<span class="token punctuation">.</span><span class="token function">LoadFontFace</span><span class="token punctuation">(</span><span class="token string">"gilmer-heavy.ttf"</span><span class="token punctuation">,</span> <span class="token number">240</span><span class="token punctuation">)</span><span class="token punctuation">;</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+    <span class="token function">panic</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre>
+<p><img src="3.png" alt=""></p>
+<p>这样就大很多了。不知道聪明的你注意到了没有，在调用<code>dc.DrawString("Hello, world!", 0, S/2)</code>时，我们设置的坐标是 <code>(0, S/2)</code> ，也就是左侧边的正中心点，<strong>这个位置刚好是绘制出来的文字的左下角的坐标</strong>，这是需要注意的一点。</p>
+<h3 id="居中显示"><a href="#居中显示" class="headerlink" title="居中显示"></a>居中显示</h3><p>如果想要文字居中显示怎么办呢？比如我们想要这个 <code>Hello,World!</code> 显示在图片的正中央，要怎么处理呢？一个笨办法当然是通过调整字体位置来实现这个效果，让我们先来试试：</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">if</span> err <span class="token operator">:=</span> dc<span class="token punctuation">.</span><span class="token function">LoadFontFace</span><span class="token punctuation">(</span><span class="token string">"gilmer-heavy.ttf"</span><span class="token punctuation">,</span> <span class="token number">120</span><span class="token punctuation">)</span><span class="token punctuation">;</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+    <span class="token function">panic</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+dc<span class="token punctuation">.</span><span class="token function">DrawString</span><span class="token punctuation">(</span><span class="token string">"Hello, world!"</span><span class="token punctuation">,</span> <span class="token number">130</span><span class="token punctuation">,</span> S<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">)</span></code></pre>
+<p><img src="4.png" alt=""></p>
+<p>通过多次调整，字体大小设置为<code>120</code>时，<code>x</code>的位置设置为<code>130</code>，基本上可以看起来是居中的。但这样的话每次换文字都得反复调整位置，显然不科学。</p>
+<p>别慌，有一个方法可以得到文字的宽度，<code>MeasureString()</code> 可以得到在当前字体下指定字符串的宽度和高度，这个高度其实就是前面通过 <code>points * 72 / 96</code> 计算得到的，然后我们再将左下角的位置设置为<code>((S-sWidth)/2, (S+sHeight)/2)</code>即可实现文字居中的效果，注意y轴坐标是<code>(S+sHeight)/2</code>，因为文字的左上顶点位置y轴坐标应该是<code>(S-sHeight)/2</code>，左下顶点坐标只需要再加上字体高度即可得出。</p>
+<pre class=" language-go"><code class="language-go">s <span class="token operator">:=</span> <span class="token string">"Hello, world!"</span>
+sWidth<span class="token punctuation">,</span> sHeight <span class="token operator">:=</span> dc<span class="token punctuation">.</span><span class="token function">MeasureString</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+dc<span class="token punctuation">.</span><span class="token function">DrawString</span><span class="token punctuation">(</span>s<span class="token punctuation">,</span> <span class="token punctuation">(</span>S<span class="token operator">-</span>sWidth<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>S<span class="token operator">+</span>sHeight<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">)</span></code></pre>
+<p><img src="5.png" alt=""></p>
+<p>这样看来，居中显示也不过如此嘛。但别高兴的太早，有没有想过，如果文字过长该怎么处理？比如我们来调整一下文字内容，再看下生成的效果。</p>
+<pre class=" language-go"><code class="language-go">s <span class="token operator">:=</span> <span class="token string">"Hello,world! Hello,ByteDancer!"</span></code></pre>
+<p><img src="6.png" alt=""></p>
+<p>文字已经超出边界了，显然不是理想的效果，这个时候有两种处理方法，一种是添加省略号，一种是换行。</p>
+<h3 id="单行长文本处理"><a href="#单行长文本处理" class="headerlink" title="单行长文本处理"></a>单行长文本处理</h3><p>先来说一下添加省略号的处理方案，听起来好像挺简单，但实际上处理起来也挺麻烦的。</p>
+<p>首先需要确定一个文字展示的最大宽度，因为如果满打满算整行都塞满文字显然不好看。其次是要逐个字符进行宽度计算，并判断是否会超过最大宽度，最后截取并保留刚好小于最大宽度时的字符串（需要考虑省略号的宽度）。</p>
+<p>我们来逐个处理。首先拍脑袋定一个文字最大宽度为图片宽度的<code>0.75</code>倍。</p>
+<pre class=" language-go"><code class="language-go">maxTextWidth <span class="token operator">:=</span> S <span class="token operator">*</span> <span class="token number">0.75</span></code></pre>
+<p>然后来逐个字符计算宽度，直到刚好大于最大宽度为止。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token function">TruncateText</span><span class="token punctuation">(</span>dc <span class="token operator">*</span>gg<span class="token punctuation">.</span>Context<span class="token punctuation">,</span> originalText <span class="token builtin">string</span><span class="token punctuation">,</span> maxTextWidth <span class="token builtin">float64</span><span class="token punctuation">)</span> <span class="token builtin">string</span> <span class="token punctuation">{</span>
+    tmpStr <span class="token operator">:=</span> <span class="token string">""</span>
+    <span class="token keyword">for</span> i <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token function">len</span><span class="token punctuation">(</span>originalText<span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">{</span>
+        tmpStr <span class="token operator">=</span> tmpStr <span class="token operator">+</span> <span class="token function">string</span><span class="token punctuation">(</span>originalText<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        w<span class="token punctuation">,</span> <span class="token boolean">_</span> <span class="token operator">:=</span> dc<span class="token punctuation">.</span><span class="token function">MeasureString</span><span class="token punctuation">(</span>tmpStr<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> w <span class="token operator">></span> maxTextWidth <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> tmpStr<span class="token punctuation">[</span><span class="token number">0</span> <span class="token punctuation">:</span> i<span class="token number">-1</span><span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> tmpStr
+<span class="token punctuation">}</span></code></pre>
+<p>然后我们调整一下调用的地方。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> S <span class="token operator">=</span> <span class="token number">1024</span>
+    dc <span class="token operator">:=</span> gg<span class="token punctuation">.</span><span class="token function">NewContext</span><span class="token punctuation">(</span>S<span class="token punctuation">,</span> S<span class="token punctuation">)</span>
+    dc<span class="token punctuation">.</span><span class="token function">SetRGB</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+    dc<span class="token punctuation">.</span><span class="token function">Clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    dc<span class="token punctuation">.</span><span class="token function">SetRGB</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> err <span class="token operator">:=</span> dc<span class="token punctuation">.</span><span class="token function">LoadFontFace</span><span class="token punctuation">(</span><span class="token string">"gilmer-heavy.ttf"</span><span class="token punctuation">,</span> <span class="token number">120</span><span class="token punctuation">)</span><span class="token punctuation">;</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+        <span class="token function">panic</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    s <span class="token operator">:=</span> <span class="token string">"Hello,world! Hello,ByteDancer!"</span>
+    ellipsisWidth<span class="token punctuation">,</span> <span class="token boolean">_</span> <span class="token operator">:=</span> dc<span class="token punctuation">.</span><span class="token function">MeasureString</span><span class="token punctuation">(</span><span class="token string">"..."</span><span class="token punctuation">)</span>
+    maxTextWidth <span class="token operator">:=</span> S <span class="token operator">*</span> <span class="token number">0.75</span>
+    s <span class="token operator">=</span> <span class="token function">TruncateText</span><span class="token punctuation">(</span>dc<span class="token punctuation">,</span> s<span class="token punctuation">,</span> maxTextWidth <span class="token operator">-</span> ellipsisWidth<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"..."</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+    sWidth<span class="token punctuation">,</span> sHeight <span class="token operator">:=</span> dc<span class="token punctuation">.</span><span class="token function">MeasureString</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+
+    dc<span class="token punctuation">.</span><span class="token function">DrawString</span><span class="token punctuation">(</span>s<span class="token punctuation">,</span> <span class="token punctuation">(</span>S<span class="token operator">-</span>sWidth<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>S<span class="token operator">+</span>sHeight<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">)</span>
+    dc<span class="token punctuation">.</span><span class="token function">SavePNG</span><span class="token punctuation">(</span><span class="token string">"out.png"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre>
+<p>这里我们先计算了省略号的宽度，然后用最大字符串宽度减去省略号宽度作为最大宽度传入，得到最终要展示的字符串。生成的效果如下：</p>
+<p><img src="7.png" alt=""></p>
+<p>看起来好像没什么毛病，但如果我们把文字换成中文，情况可能就不一样了。我们换一个中文字体，然后把字符串设置成中文。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">if</span> err <span class="token operator">:=</span> dc<span class="token punctuation">.</span><span class="token function">LoadFontFace</span><span class="token punctuation">(</span><span class="token string">"方正楷体简体.ttf"</span><span class="token punctuation">,</span> <span class="token number">120</span><span class="token punctuation">)</span><span class="token punctuation">;</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+    <span class="token function">panic</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+s <span class="token operator">:=</span> <span class="token string">"如果我们把文字换成中文"</span></code></pre>
+<p>就变成了这个样子。</p>
+<p><img src="8.png" alt=""></p>
+<p>发现图片上只剩下了省略号，原因是中文字符串分割不正确导致出现了乱码，而这个乱码在字体里找不到对应的文字，所以无法展示。这时，需要先将字符串先转化为<code>rune</code>数组，或者通过直接对字符串使用 <code>for range</code> 遍历，可以避免在中文的情况出现乱码的情况。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token function">TruncateText</span><span class="token punctuation">(</span>dc <span class="token operator">*</span>gg<span class="token punctuation">.</span>Context<span class="token punctuation">,</span> originalText <span class="token builtin">string</span><span class="token punctuation">,</span> maxTextWidth <span class="token builtin">float64</span><span class="token punctuation">)</span> <span class="token builtin">string</span> <span class="token punctuation">{</span>
+    tmpStr <span class="token operator">:=</span> <span class="token string">""</span>
+    result <span class="token operator">:=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">rune</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> <span class="token boolean">_</span><span class="token punctuation">,</span> r <span class="token operator">:=</span> <span class="token keyword">range</span> originalText <span class="token punctuation">{</span>
+        tmpStr <span class="token operator">=</span> tmpStr <span class="token operator">+</span> <span class="token function">string</span><span class="token punctuation">(</span>r<span class="token punctuation">)</span>
+        w<span class="token punctuation">,</span> <span class="token boolean">_</span> <span class="token operator">:=</span> dc<span class="token punctuation">.</span><span class="token function">MeasureString</span><span class="token punctuation">(</span>tmpStr<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> w <span class="token operator">></span> maxTextWidth <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token function">len</span><span class="token punctuation">(</span>tmpStr<span class="token punctuation">)</span> <span class="token operator">&lt;=</span> <span class="token number">1</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token string">""</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                <span class="token keyword">break</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            result <span class="token operator">=</span> <span class="token function">append</span><span class="token punctuation">(</span>result<span class="token punctuation">,</span> r<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token function">string</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre>
+<p>这样文字就能按照我们的预期进行展示了。</p>
+<p><img src="9.png" alt=""></p>
+<h3 id="多行文本处理"><a href="#多行文本处理" class="headerlink" title="多行文本处理"></a>多行文本处理</h3><p>接下来，我们来看看怎么处理多行文本，即当一行文字展示不下时，把文字切割成多行进行展示。如果我们仍旧使用之前的方法来处理的话，就需要先计算好每行展示的字以及行数，然后再进行展示。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+    <span class="token string">"github.com/fogleman/gg"</span>
+    <span class="token string">"strings"</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> S <span class="token operator">=</span> <span class="token number">1024</span>
+    dc <span class="token operator">:=</span> gg<span class="token punctuation">.</span><span class="token function">NewContext</span><span class="token punctuation">(</span>S<span class="token punctuation">,</span> S<span class="token punctuation">)</span>
+    dc<span class="token punctuation">.</span><span class="token function">SetRGB</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+    dc<span class="token punctuation">.</span><span class="token function">Clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    dc<span class="token punctuation">.</span><span class="token function">SetRGB</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> err <span class="token operator">:=</span> dc<span class="token punctuation">.</span><span class="token function">LoadFontFace</span><span class="token punctuation">(</span><span class="token string">"/Users/bytedance/Downloads/方正楷体简体.ttf"</span><span class="token punctuation">,</span> <span class="token number">120</span><span class="token punctuation">)</span><span class="token punctuation">;</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+        <span class="token function">panic</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    s <span class="token operator">:=</span> <span class="token string">"这是我的一个秘密，再简单不过的秘密：一个人只有用心去看，才能看到真实。事情的真相只用眼睛是看不见的。        --《小王子》"</span>
+    ellipsisWidth<span class="token punctuation">,</span> <span class="token boolean">_</span> <span class="token operator">:=</span> dc<span class="token punctuation">.</span><span class="token function">MeasureString</span><span class="token punctuation">(</span><span class="token string">"..."</span><span class="token punctuation">)</span>
+
+    maxTextWidth <span class="token operator">:=</span> S <span class="token operator">*</span> <span class="token number">0.9</span>
+    lineSpace <span class="token operator">:=</span> <span class="token number">25.0</span>
+    maxLine <span class="token operator">:=</span> <span class="token function">int</span><span class="token punctuation">(</span>S <span class="token operator">/</span> <span class="token punctuation">(</span>dc<span class="token punctuation">.</span><span class="token function">FontHeight</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> lineSpace<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    line <span class="token operator">:=</span> <span class="token number">0</span>
+    lineTexts <span class="token operator">:=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> <span class="token function">len</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">0</span> <span class="token punctuation">{</span>
+        line<span class="token operator">++</span>
+        <span class="token keyword">if</span> line <span class="token operator">></span> maxLine <span class="token punctuation">{</span>
+            <span class="token keyword">break</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> line <span class="token operator">==</span> maxLine <span class="token punctuation">{</span>
+            sw<span class="token punctuation">,</span> <span class="token boolean">_</span> <span class="token operator">:=</span> dc<span class="token punctuation">.</span><span class="token function">MeasureString</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+            <span class="token keyword">if</span> sw <span class="token operator">></span> maxTextWidth <span class="token punctuation">{</span>
+                maxTextWidth <span class="token operator">-=</span> ellipsisWidth
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        lineText <span class="token operator">:=</span> <span class="token function">TruncateText</span><span class="token punctuation">(</span>dc<span class="token punctuation">,</span> s<span class="token punctuation">,</span> maxTextWidth<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> line <span class="token operator">==</span> maxLine <span class="token operator">&amp;&amp;</span> <span class="token function">len</span><span class="token punctuation">(</span>lineText<span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token function">len</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            lineText <span class="token operator">+=</span> <span class="token string">"..."</span>
+        <span class="token punctuation">}</span>
+        lineTexts <span class="token operator">=</span> <span class="token function">append</span><span class="token punctuation">(</span>lineTexts<span class="token punctuation">,</span> lineText<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token function">len</span><span class="token punctuation">(</span>lineText<span class="token punctuation">)</span> <span class="token operator">>=</span> <span class="token function">len</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">break</span>
+        <span class="token punctuation">}</span>
+        s <span class="token operator">=</span> s<span class="token punctuation">[</span><span class="token function">len</span><span class="token punctuation">(</span>lineText<span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+
+    lineY <span class="token operator">:=</span> <span class="token punctuation">(</span>S <span class="token operator">-</span> dc<span class="token punctuation">.</span><span class="token function">FontHeight</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token function">float64</span><span class="token punctuation">(</span><span class="token function">len</span><span class="token punctuation">(</span>lineTexts<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">-</span> lineSpace<span class="token operator">*</span><span class="token function">float64</span><span class="token punctuation">(</span><span class="token function">len</span><span class="token punctuation">(</span>lineTexts<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span>
+    lineY <span class="token operator">+=</span> dc<span class="token punctuation">.</span><span class="token function">FontHeight</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> <span class="token boolean">_</span><span class="token punctuation">,</span> text <span class="token operator">:=</span> <span class="token keyword">range</span> lineTexts <span class="token punctuation">{</span>
+        sWidth<span class="token punctuation">,</span> <span class="token boolean">_</span> <span class="token operator">:=</span> dc<span class="token punctuation">.</span><span class="token function">MeasureString</span><span class="token punctuation">(</span>text<span class="token punctuation">)</span>
+        lineX <span class="token operator">:=</span> <span class="token punctuation">(</span>S <span class="token operator">-</span> sWidth<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span>
+        dc<span class="token punctuation">.</span><span class="token function">DrawString</span><span class="token punctuation">(</span>text<span class="token punctuation">,</span> lineX<span class="token punctuation">,</span> lineY<span class="token punctuation">)</span>
+        lineY <span class="token operator">+=</span> dc<span class="token punctuation">.</span><span class="token function">FontHeight</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> lineSpace
+    <span class="token punctuation">}</span>
+
+    dc<span class="token punctuation">.</span><span class="token function">SavePNG</span><span class="token punctuation">(</span><span class="token string">"out.png"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">TruncateText</span><span class="token punctuation">(</span>dc <span class="token operator">*</span>gg<span class="token punctuation">.</span>Context<span class="token punctuation">,</span> originalText <span class="token builtin">string</span><span class="token punctuation">,</span> maxTextWidth <span class="token builtin">float64</span><span class="token punctuation">)</span> <span class="token builtin">string</span> <span class="token punctuation">{</span>
+    tmpStr <span class="token operator">:=</span> <span class="token string">""</span>
+    result <span class="token operator">:=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">rune</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> <span class="token boolean">_</span><span class="token punctuation">,</span> r <span class="token operator">:=</span> <span class="token keyword">range</span> originalText <span class="token punctuation">{</span>
+        tmpStr <span class="token operator">=</span> tmpStr <span class="token operator">+</span> <span class="token function">string</span><span class="token punctuation">(</span>r<span class="token punctuation">)</span>
+        w<span class="token punctuation">,</span> <span class="token boolean">_</span> <span class="token operator">:=</span> dc<span class="token punctuation">.</span><span class="token function">MeasureString</span><span class="token punctuation">(</span>tmpStr<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> w <span class="token operator">></span> maxTextWidth <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token function">len</span><span class="token punctuation">(</span>tmpStr<span class="token punctuation">)</span> <span class="token operator">&lt;=</span> <span class="token number">1</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token string">""</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                <span class="token keyword">break</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            result <span class="token operator">=</span> <span class="token function">append</span><span class="token punctuation">(</span>result<span class="token punctuation">,</span> r<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token function">string</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre>
+<p>这段逻辑其实也很简单，首先根据行高和行间距计算出当前图片最多能展示多少行字，然后遍历需要展示的字符串进行逐行截取，截取出一行行的文字来。</p>
+<p>遍历时有一个小细节，那就是判断是否已经到达最后一行，如果到达最后一行，则要考虑是否添加省略号了。</p>
+<pre class=" language-go"><code class="language-go"><span class="token comment" spellcheck="true">//如果已经是最后一行，则需要判断剩余字符串是否仍旧超过最大宽度</span>
+<span class="token keyword">if</span> line <span class="token operator">==</span> maxLine <span class="token punctuation">{</span>
+    sw<span class="token punctuation">,</span> <span class="token boolean">_</span> <span class="token operator">:=</span> dc<span class="token punctuation">.</span><span class="token function">MeasureString</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true">// 如果超过则需要在末尾添加省略号，截取的最大宽度需要减去省略号的宽度</span>
+    <span class="token keyword">if</span> sw <span class="token operator">></span> maxTextWidth <span class="token punctuation">{</span>
+        maxTextWidth <span class="token operator">-=</span> ellipsisWidth
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+lineText <span class="token operator">:=</span> <span class="token function">TruncateText</span><span class="token punctuation">(</span>dc<span class="token punctuation">,</span> s<span class="token punctuation">,</span> maxTextWidth<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// 如果是最后一行并且文字仍旧是被截取过，那么在末尾添加省略号</span>
+<span class="token keyword">if</span> line <span class="token operator">==</span> maxLine <span class="token operator">&amp;&amp;</span> <span class="token function">len</span><span class="token punctuation">(</span>lineText<span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token function">len</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    lineText <span class="token operator">+=</span> <span class="token string">"..."</span>
+<span class="token punctuation">}</span></code></pre>
+<p>在绘制文本时，先考虑整个文本框的左上顶点位置，因为需要居中展示，每一行的宽度是变化的，X轴坐标是不确定的，但是Y轴坐标是可以先计算出来的，因为每一行的高度和行间距我们都已经知道了。整个文本框的高度就是<code>dc.FontHeight()*float64(len(lineTexts)) - lineSpace*float64(len(lineTexts)-1))</code> ，用图片高度减去文本框高度再除以2，就能得到左上顶点高度了。</p>
+<pre class=" language-go"><code class="language-go">lineY <span class="token operator">:=</span> <span class="token punctuation">(</span>S <span class="token operator">-</span> dc<span class="token punctuation">.</span><span class="token function">FontHeight</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token function">float64</span><span class="token punctuation">(</span><span class="token function">len</span><span class="token punctuation">(</span>lineTexts<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">-</span> lineSpace<span class="token operator">*</span><span class="token function">float64</span><span class="token punctuation">(</span><span class="token function">len</span><span class="token punctuation">(</span>lineTexts<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span></code></pre>
+<p>然后开始逐行绘制文字，计算每一行的左下顶点X轴和Y轴坐标即可。</p>
+<pre class=" language-go"><code class="language-go">lineY <span class="token operator">+=</span> dc<span class="token punctuation">.</span><span class="token function">FontHeight</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> <span class="token boolean">_</span><span class="token punctuation">,</span> text <span class="token operator">:=</span> <span class="token keyword">range</span> lineTexts <span class="token punctuation">{</span>
+    sWidth<span class="token punctuation">,</span> <span class="token boolean">_</span> <span class="token operator">:=</span> dc<span class="token punctuation">.</span><span class="token function">MeasureString</span><span class="token punctuation">(</span>text<span class="token punctuation">)</span>
+    lineX <span class="token operator">:=</span> <span class="token punctuation">(</span>S <span class="token operator">-</span> sWidth<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span>
+    dc<span class="token punctuation">.</span><span class="token function">DrawString</span><span class="token punctuation">(</span>text<span class="token punctuation">,</span> lineX<span class="token punctuation">,</span> lineY<span class="token punctuation">)</span>
+    lineY <span class="token operator">+=</span> dc<span class="token punctuation">.</span><span class="token function">FontHeight</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> lineSpace
+<span class="token punctuation">}</span></code></pre>
+<p>最后的效果如下图：</p>
+<p><img src="10.png" alt=""></p>
+<p>这样虽然实现了效果，但是显然有些太过复杂，我们还能再简化一下这个过程。</p>
+<p>在gg库中，还有两个方法可以绘制文字，<code>DrawStringAnchored()</code> 和 <code>DrawStringWrapped()</code>。前者可以在指定一个点为偏移起点。后者则类似于一个文本框的效果，可以指定文本框中心点和文本框宽度，这些将在下一篇中进行介绍。</p>
+<p>这里的处理没有考虑原文本中有换行符的情况，所以其实还不够完善，在处理时可以先对文本进行换行符分割，然后再依次进行上述处理。</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>这一篇中，主要讲解了如何在纯色背景图上进行文字的绘制，说明了 <code>DrawString()</code> 方法和 <code>MeasureString()</code> 的使用，并利用它们来实现了文字居中的效果。在下一篇中，将对通过另外几个方法的讲解来了解文字绘制的更多技巧。</p>
+<p>如果本篇内容对你有帮助，别忘了点赞关注加收藏～</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://mfrank2016.github.io" rel="external nofollow noreferrer">FunHub</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://mfrank2016.github.io/2020/12/20/picture/go-draw-word-in-pic/">https://mfrank2016.github.io/2020/12/20/picture/go-draw-word-in-pic/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://mfrank2016.github.io" target="_blank">FunHub</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/go/">
+                                    <span class="chip bg-color">go</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赞赏是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'Eb45FDwSourJ5HnxwfDWjfha-MdYXbMMI',
+        appKey: 'TBc13rAB03cenwA0KMyt4LG2',
+        notify: 'true' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'retro',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: 'Comment here'
+    });
+</script>
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2020/12/22/picture/go-draw-word-in-pic2/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="【Go语言绘图】图片添加文字（二）">
+                        
+                        <span class="card-title">【Go语言绘图】图片添加文字（二）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            这一篇将继续介绍gg库中绘制文字相关的方法，主要包括：DrawStringAnchored()、DrawStringWrapped()、MeasureMultilineString()、WordWrap()下面来分别进行介绍。
+DrawSt
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-22
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/programming/" class="post-category">
+                                    编程
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/go/">
+                        <span class="chip bg-color">go</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/12/16/picture/go-pic-rotate-use-gg-package/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="【Go语言绘图】图片的旋转">
+                        
+                        <span class="card-title">【Go语言绘图】图片的旋转</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            在上一篇中，我们了解了gg库的基本使用，包括调整大小、调整圆形参数、设置颜色、保存图片、加载图片和裁剪。这一篇我们来学习一下图片的旋转。
+加载图片首先，我们先来一张黄图。
+func TestRotateImage(t *testing.T)
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-16
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/programming/" class="post-category">
+                                    编程
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/go/">
+                        <span class="chip bg-color">go</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('50')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: FunHub<br />'
+            + '文章作者: FunHub<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='true'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.5'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">FunHub</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">73.5k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "5";
+                    var startDate = "1";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/Mfrank2016" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:337603640@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=337603640" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 337603640" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+        <script src="//code.tidio.co/y3oy7zhgu7qixoxfgol6iy0winv1f0qc.js"></script>
+        <script>
+            $(document).ready(function () {
+                setInterval(change_Tidio, 50);
+                function change_Tidio() {
+                    var tidio=$("#tidio-chat iframe");
+                    if(tidio.css("display")=="block"&& $(window).width()>977 ){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" &&$(window).width()>977)>0? "-40px" : ($("div.toc-title").length&&$(window).width()>977)>0?"85px":"20px";
+                        document.getElementById("tidio-chat-iframe").style.right="-15px";
+                        document.getElementById("tidio-chat-iframe").style.height=parseInt(tidio.css("height"))>=520?"520px":tidio.css("height");
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    else if(tidio.css("display")=="block"&&$(window).width()>601 &&$(window).width()<992 ){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && 601< $(window).width()<992)>0? "-40px":"20px" ;
+                        document.getElementById("tidio-chat-iframe").style.right="-15px";
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    else if(tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))<230){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && $(window).width()<601)>0? "-10px":"45px" ;
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    if( tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))>=230){
+                        document.getElementById("tidio-chat-iframe").style.zIndex="998";
+                    }
+                }
+            });
+        </script>
+    
+
+    
+
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
